@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.chat-container {
+    width: 300px;
+    margin: auto;
+}
+#chat-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+body { 
+    font-family: Arial, sans-serif; 
+    text-align: center;
+     margin: 50px; 
+    }
+input { 
+    width: 80%; 
+    padding: 10px;
+    margin: 10px;
+    overflow-y: auto;
+     }
+button {
+        padding: 10px 20px; 
+        cursor: pointer;
+     }
+#chatbox {
+     border: 1px solid #ccc;
+      padding: 10px; width: 80%; 
+      margin: auto; height: 300px; 
+      overflow-y: auto; 
+      text-align: left;
+     }
+        
+.user { 
+        color: blue;
+     }
+.bot {
+    color: green; 
+    }
+    .message { padding: 10px; margin: 5px; border-radius: 5px; }
+    .user { background-color: #28d6a8; }
+    .bot { background-color: #f1f1f1; text-align: left; }
+    .code-container { background: #6780b1; color: #fff; padding: 10px; border-radius: 5px; font-family: monospace; position: relative; }
+    .copy-btn { position: absolute; top: 5px; right: 5px; background: #007bff; color: white; border: none; padding: 5px; cursor: pointer; border-radius: 3px; }
+    
