@@ -46,12 +46,11 @@ async def chat(msg: Message):
 
         # Generate AI response
         model = genai.GenerativeModel("gemini-2.0-flash")
+
         response = model.generate_content(full_prompt)
 
         # Save bot response to history
         chat_memory["history"].append(f"Bot: {response.text}")
-
         return {"reply": response.text}
-    
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
