@@ -30,23 +30,28 @@ app.add_middleware(
 class Message(BaseModel):
     text: str
 
-# Define chatbot endpoint
+# 🧠 Create an in-memory dictionary to store chat history
+chat_memory = {
+    "history": []  # Single session memory; can be expanded to use session/user_id
+}
+
 @app.post("/chat/")
 async def chat(msg: Message):
     try:
-        model = genai.GenerativeModel("gemini-2.0-flash")  # Ensure correct model
-        prompt = (
-            msg.text + "\n"
-            "After reading the above question or statement, respond following these conditions:\n"
-            "- Use Markdown formatting to highlight key points, steps, or summaries.\n"
-            "- Use proper Markdown syntax for headings, subheadings, bullet points, and tables.\n"
-            "- Ensure the response is structured, clear, and well-formatted.\n"
-            "- If unsure about intent, ask clarifying questions before proceeding.\n"
-            "- For comparative queries, present information in a table format.\n"
-            "- Use simple English for easy understanding.\n"
-            "- Keep responses concise, providing only the necessary information.\n"
-        )
-        response = model.generate_content(prompt)
-        return {"reply": response.text}  # Return raw Markdown format for frontend rendering
+        # Append new user message to history
+        chat_memory["history"].append(f"User: {msg.text}")
+
+        # Build prompt from full conversation history
+        full_prompt = "\n".join(chat_memory["history"]) + "\nBot:"
+
+        # Generate AI response
+        model = genai.GenerativeModel("gemini-2.0-flash")
+        response = model.generate_content(full_prompt)
+
+        # Save bot response to history
+        chat_memory["history"].append(f"Bot: {response.text}")
+
+        return {"reply": response.text}
+    
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
