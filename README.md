@@ -1,4 +1,4 @@
-# 🧠 MSN Chatbot — AI Voice + Text Chat App (Gemini + FastAPI)
+# 🧠AI Chatbot — AI Voice + Text Chat App (Gemini + FastAPI)
 
 This is a full-stack AI chatbot that allows users to interact using voice or text. It uses a Google API key to connect the backend with Gemini Flash 2.0 (Google’s AI model) and fetch smart responses. It is built using:
 
