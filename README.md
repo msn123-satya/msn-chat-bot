@@ -1,6 +1,6 @@
 # 🧠 MSN Chatbot — AI Voice + Text Chat App (Gemini + FastAPI)
 
-This is a full-stack AI chatbot that allows users to interact using **voice** or **text**, powered by **Google Gemini Flash 2.0** via the official Python SDK. It is built using:
+This is a full-stack AI chatbot that allows users to interact using voice or text. It uses a Google API key to connect the backend with Gemini Flash 2.0 (Google’s AI model) and fetch smart responses. It is built using:
 
 - 💬 HTML, CSS, JavaScript (Frontend)
 - 🐍 FastAPI + Python 3.10 (Backend)
@@ -92,6 +92,7 @@ GEMINI_API_KEY=your-gemini-api-key-here
 ### 5. Run the Backend Server
 
 ```bash
+cd backend
 uvicorn main:app --reload
 ```
 
@@ -138,8 +139,8 @@ This project is open-source. You’re free to use, modify, or extend it.
 
 **Makka Satyanarayana**
 
-- GitHub: [your-username](https://github.com/msn123-satya)
-- LinkedIn: [your-link](www.linkedin.com/in/makka-satyanarayana-0607a7303)
+- GitHub: [msn123-satya](https://github.com/msn123-satya)
+- LinkedIn: [makka-satyanarayana](www.linkedin.com/in/makka-satyanarayana-0607a7303)
 
 ---
 
