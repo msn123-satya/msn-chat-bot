@@ -143,7 +143,7 @@ This ensures sensitive data and unnecessary files are not uploaded.
 **Makka Satyanarayana**
 
 - GitHub: [msn123-satya](https://github.com/msn123-satya)
-- LinkedIn: [makka-satyanarayana](https://www.linkedin.com/in/makka-satyanarayana-0607a7303)
+- LinkedIn: [makka-satyanarayana](https://www.linkedin.com/in/satya-python-dev)
 
 ---
 
