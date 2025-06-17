@@ -55,13 +55,20 @@ cd msnchatbot
 ### 2. Set Up Python Environment
 
 ```bash
+# Step 1: Move into the backend folder
 cd backend
+
+# Step 2: Create a virtual environment
 python -m venv venv
-# Activate the virtual environment
-# On Windows:
+
+# Step 3: Activate the virtual environment
+
+# For Windows:
 venv\Scripts\activate
-# On macOS/Linux:
+
+# For macOS/Linux:
 source venv/bin/activate
+
 ```
 
 ### 3. Install Required Python Packages
@@ -81,13 +88,13 @@ google-generativeai
 
 ### 4. Create the `.environment` File
 
-Inside the `backend/` folder, create a file named `.environment` and add your Gemini API key:
+Inside the `backend/` folder, create a file named `.env` and add your Gemini API key:
 
 ```
 GEMINI_API_KEY=your-gemini-api-key-here
 ```
 
-> ⚠️ This file is listed in `.ignore` so it won’t be uploaded to GitHub.
+> ⚠️ This file is listed in `.gitignore` so it won’t be uploaded to GitHub.
 
 ### 5. Run the Backend Server
 
@@ -129,11 +136,7 @@ This ensures sensitive data and unnecessary files are not uploaded.
 
 ---
 
-## 📄 License
 
-This project is open-source. You’re free to use, modify, or extend it.
-
----
 
 ## ✨ Author
 
